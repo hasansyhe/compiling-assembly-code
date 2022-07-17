@@ -6,7 +6,7 @@
 # define local variables
 format_output_obj=".o";
 # NOTE: if your format file is .s change this value into '.s'
-format_orginal_asm=".asm";
+format_original_asm=".asm";
 program_name="alex_out";
 run_command="run"
 
@@ -27,7 +27,7 @@ else
 	then
 		echo "${RED}NOTE:${GREEN} compile without execution";
 		output=$1$format_output_obj;
-		nasm -f elf $1$format_orginal_asm;
+		nasm -f elf $1$format_original_asm;
 		ld -m elf_i386 -s -o $program_name $output;
 		rm $output; # remove o. file
 
@@ -36,7 +36,7 @@ else
 		then
 			echo "${RED}NOTE:${GREEN} compile and execute";
 			output=$1$format_output_obj;
-			nasm -f elf $1$format_orginal_asm;
+			nasm -f elf $1$format_original_asm;
 			ld -m elf_i386 -s -o $program_name $output;
 			rm $output; # remove .o file
 			./$program_name # run output file
