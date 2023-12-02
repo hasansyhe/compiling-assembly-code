@@ -5,17 +5,18 @@
 
 # important variables
 OUT_OBJECT_FORMAT=".o";
-# IF YOUR FILE EXTENSION IS ENDING WITH filename.s CHANGE THE VALUE OF FILE_EXTENSION VARIABLE INTO ".s"
 FILE_EXTENSION=".asm";
 PROGRAM_NAME="assembly";
 RUN_COMMAND="run"
+
+# if your file extension ending with filename'.s' format
+# just change the value of FILE_EXTENSION into '.s' 
 
 # color variables
 BLACK='\033[0;30m'; # black color
 RED='\033[0;31m'; # red color
 GREEN='\033[0;32m'; # green color
 OUT='\033[0;33m'; # output color
-# end
 
 # print error message if the value of $1 is empty.
 if [ -z $1 ];
